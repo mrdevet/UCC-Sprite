@@ -2,7 +2,6 @@
 .upm
 .breakpoints
 poetry.lock
-main.py
 test.txt
 upload.sh
 

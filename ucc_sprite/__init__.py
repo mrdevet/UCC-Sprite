@@ -534,6 +534,7 @@ class Sprite (pygame.sprite.DirtySprite):
     def rotates (self, new_rotates):
 
         self._rotates = bool(new_rotates)
+        self.direction = self._dir
 
 
     @property

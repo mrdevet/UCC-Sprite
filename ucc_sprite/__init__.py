@@ -155,7 +155,7 @@ class Sprite (pygame.sprite.DirtySprite):
 
 
     @property
-    def top_left (self):
+    def topleft (self):
         '''
         The coordinates of the top left corner of the sprite.
         '''
@@ -163,7 +163,7 @@ class Sprite (pygame.sprite.DirtySprite):
         return tuple(self._pos)
 
     @top_left.setter
-    def top_left (self, new_top_left):
+    def topleft (self, new_top_left):
 
         try:
             self._pos = vector(new_top_left)
@@ -172,7 +172,7 @@ class Sprite (pygame.sprite.DirtySprite):
 
 
     @property
-    def bottom_left (self):
+    def bottomleft (self):
         '''
         The coordinates of the bottom left corner of the sprite.
         '''
@@ -180,7 +180,7 @@ class Sprite (pygame.sprite.DirtySprite):
         return tuple(self._pos + vector(0, self.height))
 
     @bottom_left.setter
-    def bottom_left (self, new_bottom_left):
+    def bottomleft (self, new_bottom_left):
 
         try:
             self._pos = vector(new_bottom_left) - vector(0, self.height)
@@ -189,7 +189,7 @@ class Sprite (pygame.sprite.DirtySprite):
 
 
     @property
-    def top_right (self):
+    def topright (self):
         '''
         The coordinates of the top right corner of the sprite.
         '''
@@ -197,7 +197,7 @@ class Sprite (pygame.sprite.DirtySprite):
         return tuple(self._pos + vector(self.width, 0))
 
     @top_right.setter
-    def top_right (self, new_top_right):
+    def topright (self, new_top_right):
 
         try:
             self._pos = vector(new_top_right) - vector(self.width, 0)
@@ -206,7 +206,7 @@ class Sprite (pygame.sprite.DirtySprite):
 
 
     @property
-    def bottom_right (self):
+    def bottomright (self):
         '''
         The coordinates of the bottom right corner of the sprite.
         '''
@@ -214,7 +214,7 @@ class Sprite (pygame.sprite.DirtySprite):
         return tuple(self._pos + vector(self.size))
 
     @bottom_right.setter
-    def bottom_right (self, new_bottom_right):
+    def bottomright (self, new_bottom_right):
 
         try:
             self._pos = vector(new_bottom_right) - vector(self.size)
@@ -223,7 +223,7 @@ class Sprite (pygame.sprite.DirtySprite):
 
 
     @property
-    def mid_left (self):
+    def midleft (self):
         '''
         The coordinates of the middle of the left edge of the sprite.
         '''
@@ -231,7 +231,7 @@ class Sprite (pygame.sprite.DirtySprite):
         return tuple(self._pos + vector(0, self.height / 2))
 
     @mid_left.setter
-    def mid_left (self, new_mid_left):
+    def midleft (self, new_mid_left):
 
         try:
             self._pos = vector(new_mid_left) - vector(0, self.height / 2)
@@ -240,7 +240,7 @@ class Sprite (pygame.sprite.DirtySprite):
 
 
     @property
-    def mid_right (self):
+    def midright (self):
         '''
         The coordinates of the middle of the right edge of the sprite.
         '''
@@ -248,7 +248,7 @@ class Sprite (pygame.sprite.DirtySprite):
         return tuple(self._pos + vector(self.width, self.height / 2))
 
     @mid_right.setter
-    def mid_right (self, new_mid_right):
+    def midright (self, new_mid_right):
 
         try:
             self._pos = vector(new_mid_right) - vector(self.width, self.height / 2)
@@ -257,7 +257,7 @@ class Sprite (pygame.sprite.DirtySprite):
 
 
     @property
-    def mid_top (self):
+    def midtop (self):
         '''
         The coordinates of the middle of the top edge of the sprite.
         '''
@@ -265,7 +265,7 @@ class Sprite (pygame.sprite.DirtySprite):
         return tuple(self._pos + vector(self.width / 2, 0))
 
     @mid_top.setter
-    def mid_top (self, new_mid_top):
+    def midtop (self, new_mid_top):
 
         try:
             self._pos = vector(new_mid_top) - vector(self.width / 2, 0)
@@ -274,7 +274,7 @@ class Sprite (pygame.sprite.DirtySprite):
 
 
     @property
-    def mid_bottom (self):
+    def midbottom (self):
         '''
         The coordinates of the middle of the bottom edge of the sprite.
         '''
@@ -282,7 +282,7 @@ class Sprite (pygame.sprite.DirtySprite):
         return tuple(self._pos + vector(self.width / 2, self.height))
 
     @mid_bottom.setter
-    def mid_bottom (self, new_mid_bottom):
+    def midbottom (self, new_mid_bottom):
 
         try:
             self._pos = vector(new_mid_bottom) - vector(self.width / 2, self.height)
@@ -376,7 +376,7 @@ class Sprite (pygame.sprite.DirtySprite):
 
     
     @property
-    def center_x (self):
+    def centerx (self):
         '''
         The x-coordinate of the center of the sprite.
         '''
@@ -384,7 +384,7 @@ class Sprite (pygame.sprite.DirtySprite):
         return self._pos.x + self.width / 2
 
     @center_x.setter
-    def center_x (self, new_center_x):
+    def centerx (self, new_center_x):
 
         try:
             self._pos.x = new_center_x - self.width / 2
@@ -427,7 +427,7 @@ class Sprite (pygame.sprite.DirtySprite):
 
     
     @property
-    def center_y (self):
+    def centery (self):
         '''
         The y-coordinate of the center of the sprite.
         '''
@@ -435,7 +435,7 @@ class Sprite (pygame.sprite.DirtySprite):
         return self._pos.y + self.height / 2
 
     @center_y.setter
-    def center_y (self, new_center_y):
+    def centery (self, new_center_y):
 
         try:
             self._pos.y = new_center_y - self.height / 2
